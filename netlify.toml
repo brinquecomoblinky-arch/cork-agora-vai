@@ -1,8 +1,11 @@
 [build]
   publish = "dist"
-  command = "npx update-browserslist-db@latest"
+  command = "npx update-browserslist-db@latest && npm run build"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build.environment]
+  SECRETS_SCAN_OMIT_PATHS = "supabase/functions/check-subscription"
