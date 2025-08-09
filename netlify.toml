@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "npx update-browserslist-db@latest"
 
 [[redirects]]
   from = "/*"
